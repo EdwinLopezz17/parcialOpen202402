@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Event Check-In</h2>
+
+
+  <div class="check">
+    <h4>Ticket Validation</h4>
+
+    <div class="input-box">
+      <label> Ticket Identifier</label>
+      <input [(ngModel)]="ticketIdentifier" type="text">
+      <button (click)="checkIn()">Check In</button>
+    </div>
+
+    @if(isCheckIn){
+
+      <p>Event ID: {{currentEvent.id}}</p>
+      <p>Event Name: {{currentEvent.name}}</p>
+      <p>Event Description: {{currentEvent.description}}</p>
+      <p>Attendee First Name: {{currentAttendee.firstName}}</p>
+      <p>Attendee Last Name: {{currentAttendee.lastName}}</p>
+      <p>Checkin At: {{currentAttendee.checkedInAt}}</p>
+
+    }
+
+    <p>{{message}}</p>
+
+  </div>
+
+</div>
+
+
